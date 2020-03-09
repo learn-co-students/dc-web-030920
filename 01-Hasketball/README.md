@@ -10,7 +10,7 @@
 
 # Hashketball Review
 - Text Editor shortcuts
-- TDD
+- TDD (test driven development)
 - rspec; rspec --fail-fast
     - or a specific test: `rspec ./spec/hashketball_spec.rb:28`
 - Understand how to read tests and error messages is just as important as coding
@@ -29,22 +29,20 @@
 - Define the Single Responsibility Principle
 - Make it work (shameless green), make it right
   - Red, Green, Refactor
-- .each vs other iterators
+- .each vs other enumerators
 
 
-
-# Wrapping it up:
-- Git clone vs git fork
-- Survey/Exit Ticket
-
+# Class Repo 
+- available on Learn.co
 
 
 # Rest of the Day
 - Hashketball Group Discussion
-- Continue Deploy on Day 1
+- Continue Deploy on Day 1 (for fun and git practice)
 
 
 
 # Homework
-- Readings on Object Orientation
-- The Rest of Prework
+- Class Materials > Immersive Course Logistics
+- The entire Ruby section
+- (FSWD) PREWORK (espeically the git sections)

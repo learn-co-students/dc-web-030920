@@ -1,3 +1,5 @@
+require 'pry'
+
 def game_hash
   {
     home: {
@@ -124,3 +126,29 @@ def game_hash
     }
   }
 end
+
+def get_player_info(player_name)
+  #iterate through the game_hash 
+  game_hash.each do |team_location, team_data|
+    #iterat ethorugh the players 
+    team_data[:players].each do |player|
+      #find the right player 
+      if(player[:player_name] == player_name)
+        return player
+      end 
+    end 
+  end 
+end 
+
+def num_points_scored(player_name)
+  get_player_info(player_name)[:points]
+end 
+
+def shoe_size(player_name)
+  get_player_info(player_name)[:shoe]
+end 
+
+#return the array ["Brooklyn Nets, and Charlotte Hornets"]
+def team_names
+  game_hash.map{ |team_location, team_data| team_data[:team_name] }
+end 
