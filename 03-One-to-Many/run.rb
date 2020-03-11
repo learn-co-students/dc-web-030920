@@ -31,4 +31,7 @@ puts "Testing Tweet#username method"
 p tweet1.username
 p tweet2.username
 
+
+dad.post_tweet("Death is only the begining")
+
 binding.pry
