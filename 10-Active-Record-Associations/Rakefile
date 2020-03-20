@@ -1,0 +1,10 @@
+require_relative 'config/environment'
+require 'sinatra/activerecord/rake'
+
+desc "Loads a console"
+task :console do
+    ann = User.first
+    paul = User.last
+    tweet1 = Tweet.first
+    binding.pry
+end
