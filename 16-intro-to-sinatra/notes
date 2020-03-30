@@ -1,0 +1,18 @@
+- Request / Response Cycle
+
+- Client / Server
+    - Client: Browser
+    - Server: Computer somewhere else
+
+- Model / View / Controller 
+    - Models: Ruby models (ActiveRecord)
+    - Views: HTML templates
+    - Controllers: Processes the requests and package up response using model and view info
+
+- REST
+    - REpresentational State Transfer
+    - shows where we are
+
+- Get vs Post
+    - Get:  Gets information from server
+    - Post: Sends information to the server
