@@ -1,3 +1,8 @@
+- Go over asking questions
+  - chat
+  - participants
+
+- ** Review request/response and server/client terminology
 
 - MVC Architecture
     - Models: Store the data
@@ -28,7 +33,6 @@ class CreateBooks < ActiveRecord::Migration[5.1]
 end
 ```
 
-- ** Review request/response and server/client terminology
 - Build out controllers
 
 
