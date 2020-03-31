@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Index Page</title>
+</head>
+<body>
+
+    <ul>
+        <% @books.each do |book| %>
+            <li>
+                <a href=<%="/books/#{book.id}"%>>
+                    <%= book.title %>
+                </a>
+            </li>
+        <% end %>
+    </ul>
+</body>
+</html>
+
+<!-- <a href="/books/2">James and the Giant Peach</a> -->
