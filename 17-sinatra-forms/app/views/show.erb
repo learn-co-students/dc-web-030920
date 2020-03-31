@@ -13,5 +13,11 @@
     </div>
 
     <a href="/books">Book Index Page</a>
+    <a href="/books/<%= @book.id %>/edit">Edit this book</a>
+
+    <form action="/books/<%= @book.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete This Book">
+    </form>
 </body>
 </html>

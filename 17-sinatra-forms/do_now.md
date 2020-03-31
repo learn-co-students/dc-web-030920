@@ -25,3 +25,21 @@ end
 # QUESTION
 If the user navigates to "mywebsite/funtimes/1/2/3" what will appear on the screen?
 
+10 
+10
+10 
+200 
+200 
+200
+
+<h1>10
+<h2>200
+10
+200
+10
+200
+
+10
+200
+
+
