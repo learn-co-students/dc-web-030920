@@ -14,7 +14,8 @@ module GoogleBooks
       books = JSON.parse(RestClient.get(author_url))
       books['items'].each do |item|
         book = ::Book.new
-        book.author_id = self.author.id
+        book.author = self.author
+        # binding.pry
         book.title = item['volumeInfo']['title']
         book.snippet = item['volumeInfo']['description']
 
