@@ -21,52 +21,7 @@ class ApplicationController < Sinatra::Base
         erb :hello
     end
 
-    get "/books" do 
-        @books = Book.all
-        erb :index
-    end
-
-    get "/books/new" do 
-        # renders empty form
-        erb :new
-    end
-
-    post "/books" do 
-        # creates a new book in the database
-        # redirects to show page
-        title = params[:title]
-        author = params[:author]
-        snippet = params[:snippet]
-        book = Book.create(title: title, author: author, snippet: snippet)
-        redirect "/books/#{book.id}"
-    end
-
-    get "/books/:id" do 
-        id = params[:id]
-        @book = Book.find(id)
-        erb :show
-    end
-
-    get "/books/:id/edit" do 
-        @book = Book.find(params[:id])
-        erb :edit
-
-    end
-
-    put "/books/:id" do 
-        book = Book.find(params[:id])
-        title = params[:title]
-        author = params[:author]
-        snippet = params[:snippet]
-        book.update(title: title, author: author, snippet: snippet)
-        redirect "/books/#{book.id}"
-    end
-
-    delete "/books/:id" do 
-        book = Book.find(params[:id])
-        book.destroy 
-        redirect "/books"
-    end
+ 
 
 
 end
