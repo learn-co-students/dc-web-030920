@@ -7,17 +7,21 @@
 
     <h1><%= @author.name %></h1>
 
-    <h2>Books by this Author</h2>
 
-    <ul>
-        <% @author.books.each do |book| %>
-            <li>
-                <a href="/books/<%= book.id %>">
-                    <%= book.title %>
-                </a>
-            </li>
-        <% end %>
-    </ul>
+    <% if !@author.books.empty? %>
+        <h2>Books by this Author</h2>
+        <ul>
+            <% @author.books.each do |book| %>
+                <li>
+                    <a href="/books/<%= book.id %>">
+                        <%= book.title %>
+                    </a>
+                </li>
+            <% end %>
+        </ul>
+    <% else %>
+        <h2>This author has no books yet</h2>
+    <% end %>
 
 </body>
 </html>

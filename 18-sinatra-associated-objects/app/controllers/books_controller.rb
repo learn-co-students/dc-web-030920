@@ -2,7 +2,7 @@ class BooksController < Sinatra::Base
 
     set :views, "app/views/books"
     set :method_override, true
-    
+
     get "/books" do 
         @books = Book.all
         erb :index
@@ -10,6 +10,7 @@ class BooksController < Sinatra::Base
 
     get "/books/new" do 
         # renders empty form
+        @authors = Author.all
         erb :new
     end
 
@@ -17,10 +18,13 @@ class BooksController < Sinatra::Base
         # creates a new book in the database
         # redirects to show page
         title = params[:title]
-        author = Author.find_or_create_by(name: params[:author])
+        author = Author.find(params[:author_id])
         snippet = params[:snippet]
-        book = Book.create(title: title, author: author, snippet: snippet)
-        redirect "/books/#{book.id}"
+        book = Book.create(
+            title: title,
+            author_id: author.id,
+            snippet: snippet)
+        redirect "/authors/#{author.id}"
     end
 
     get "/books/:id" do 
