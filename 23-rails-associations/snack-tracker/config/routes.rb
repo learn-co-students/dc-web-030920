@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-    resources :snacks
-    resources :retailers, only: [:index, :show, :new, :create]
+  get 'retailer/index'
+  get 'retailer/show'
+  # get '/snacks', to: "snacks#index", as: "snacks"
+  # get '/snacks/:id', to: "snacks#show", as: "snack"
+  resources :snacks
+  get "/about", to: "snacks#about"
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+
+
