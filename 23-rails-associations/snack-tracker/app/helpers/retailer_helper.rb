@@ -1,2 +1,0 @@
-module RetailerHelper
-end
