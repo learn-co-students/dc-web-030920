@@ -1,3 +1,7 @@
+
+<%= render partial: "shared/error_list", locals: {new_object: @snack} %>
+
+
 <%= form_for(@snack) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>

@@ -18,17 +18,27 @@ class SnacksController < ApplicationController
   end
 
   def create
-    snack = Snack.create(snack_params) # strong params
-    # byebug
-    redirect_to snack_path(snack) # /snacks/7
+    @snack = Snack.new(snack_params) # strong params
+    if @snack.valid?
+      @snack.save
+      redirect_to snack_path(@snack) # /snacks/7
+    else 
+      render :new
+    end
   end
 
   def edit
+
   end
 
   def update
-    @snack.update(snack_params)
-    redirect_to snack_path(@snack)
+    @snack.assign_attributes(snack_params)
+    if @snack.valid?
+      @snack.save
+      redirect_to snack_path(@snack)
+    else 
+      render :edit
+    end
   end
 
   def destroy 

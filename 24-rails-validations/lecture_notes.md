@@ -1,3 +1,7 @@
+ - review nested forms
+ - how to practice
+ - lab review tomorrow
+
 First talk about `Proc`s.  A `Proc` is a type of "Closure", which is a reusable block of code.  It's basically a tiny function.
 
 Example:
