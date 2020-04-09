@@ -1,0 +1,7 @@
+<h1>Edit this Scientist</h1>
+
+<%= render partial: "scientist_form" %>
+
+<div>
+    <%= link_to "Delete This Scientist", scientist_path(@scientist.id), :method => :delete  %>
+</div>

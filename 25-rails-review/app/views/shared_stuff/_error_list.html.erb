@@ -1,0 +1,7 @@
+<% if new_thing.errors.full_messages.length > 0  %>
+    <div class="error_list">
+        <% new_thing.errors.full_messages.each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+<% end %>

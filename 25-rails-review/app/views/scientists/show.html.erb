@@ -1,0 +1,26 @@
+<h1>Scientist Detail Page</h1>
+
+<div>Name: <%= @scientist.name  %></div>
+<div>Field of Study: <%= @scientist.field_of_study %></div>
+
+
+<div>
+    <% if @scientist.planets.empty? %>
+        <div>This Scientist has not visited a planet yet</div>
+    <% else %>
+        <h5>Planets visited:</h5>
+            <ul>
+                <% @scientist.planets.each do |planet| %>
+                    <li><%= planet.name %></li>
+                <% end %>
+            </ul>
+    <% end %>
+
+
+</div>
+<!--
+<a href="<%= scientists_path %>">Back To Scientist Index Page</a>
+-->
+
+<%= link_to "Edit This Scientist", edit_scientist_path(@scientist.id) %>
+<%= link_to "Back To Scientist Index Page", scientists_path %>

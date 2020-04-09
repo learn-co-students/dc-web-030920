@@ -1,0 +1,16 @@
+<h1>Missions#new</h1>
+<p>Find me in app/views/missions/new.html.erb</p>
+
+<%= render partial: "shared_stuff/error_list", locals: {new_thing: @mission} %>
+
+<%= form_for @mission do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :scientist %>
+    <%= f.collection_select(:scientist_id, Scientist.all, :id, :name_with_first_initial) %>
+    <%= f.label :planet %>
+    <%= f.collection_select(:planet_id, Planet.all, :id, :name) %>
+    <%= f.submit %>
+
+<% end %>
+
