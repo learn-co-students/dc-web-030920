@@ -1,0 +1,7 @@
+require_relative 'config/environment'
+require 'sinatra/activerecord/rake'
+
+desc "Loads a console"
+task :console do
+    binding.pry
+end
