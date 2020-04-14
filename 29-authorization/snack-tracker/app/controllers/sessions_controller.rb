@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:username])
 
     if user && user.authenticate(params[:password])
-        # if they are, log them in and redirect to snack index
+        # if they are and they have the right password, 
+        # log them in and redirect to snack index
 
         session[:user_id] = user.id
         redirect_to snacks_path

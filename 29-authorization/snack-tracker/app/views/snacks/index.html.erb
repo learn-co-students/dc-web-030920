@@ -11,4 +11,7 @@
 </ul>
 
 
-<%= link_to "Back To About Page", about_path %>
+<% if logged_in? %>
+    <%= link_to "Create a new snack", new_snack_path %>
+    <%= link_to "Back To About Page", about_path %>
+<% end %>

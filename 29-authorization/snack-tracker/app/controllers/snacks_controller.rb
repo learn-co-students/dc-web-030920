@@ -1,7 +1,8 @@
 class SnacksController < ApplicationController
   
   before_action :find_snack, only: [:show, :edit, :update]
-  
+  before_action :authorized, except: [:index, :show]
+
   def index
     @snacks = Snack.all 
     render :index
@@ -17,7 +18,7 @@ class SnacksController < ApplicationController
   end
 
   def new
-    @snack = Snack.new
+      @snack = Snack.new
   end
 
   def create
