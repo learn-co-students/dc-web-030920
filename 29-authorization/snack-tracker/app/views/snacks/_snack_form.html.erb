@@ -1,0 +1,19 @@
+
+<%= render partial: "shared/error_list", locals: {new_object: @snack} %>
+
+
+<%= form_for(@snack) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :calories %>
+    <%= f.number_field :calories %>
+    <%= f.label :deliciousness %>
+    <%= f.select :deliciousness, (1..10) %>
+    <%= f.label :retailer_id %>
+    <%= f.collection_select(:retailer_id, # what we fill in
+                            Retailer.all, # what we choose from
+                            :id,          # what the computer wants
+                            :name)   %> 
+                            <%# name: what the user wants to see %>
+    <%= f.submit submit_text %>
+<% end %>
