@@ -15,6 +15,7 @@
         <div><%= link_to "Login", login_path %></div>
       <% else %>
         <div>Welcome to our website, <%= current_user.username %></div>
+        <div><%= link_to "Logout", logout_path %></div>
       <% end %>
 
     <%= yield %>

@@ -1,7 +1,6 @@
 # README
 
-- Build out index page showing all retailers
-- Build out show page showing detail for a retailer
-- Index page should link to show page
-- Use Restful routing
-- Retailer show page should list and link to all the retailer's snacks
+* To use passwords on a model:
+    - uncomment `bcrypt` gem
+    - add `has_secure_password` to top of model
+    - add `password_digest` to User model
