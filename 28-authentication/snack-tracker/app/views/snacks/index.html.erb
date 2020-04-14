@@ -1,0 +1,16 @@
+<h1>Snacks Index Page</h1>
+
+<h2>My favorite cookie is <%= cookies["my_favorite_cookie"] %></h2>
+<h3>The last snack I visited was <%= cookies["last_snack_visited"] %></h3>
+<h4><% cookies.each do |key, value| %></h4>
+        <div><%= key %>: <%= value %></div>
+        <% end %>
+<h4>Don't tell anyone I like <%= session["secret_favorite"] %></h4>
+<ul>
+    <% @snacks.each do |snack| %>
+    <li><%= link_to snack.name, snack_path(snack) %></li>
+    <% end %>
+</ul>
+
+
+<%= link_to "Back To About Page", about_path %>

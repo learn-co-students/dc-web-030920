@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SnackTracker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+      <% if session[:user_id].nil? %>  
+        <div><%= link_to "Login", login_path %></div>
+      <% else %>
+        <div>Welcome to our website, <%= current_user.username %></div>
+      <% end %>
+
+    <%= yield %>
+  </body>
+</html>
