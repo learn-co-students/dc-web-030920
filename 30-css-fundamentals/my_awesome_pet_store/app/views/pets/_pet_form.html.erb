@@ -1,0 +1,36 @@
+<% if @pet.errors.any? %>
+  <% @pet.errors.full_messages.each do |m| %>
+    <div class='error'> <%= m %> </div>
+  <% end %>
+<% end %>
+
+<%= form_for @pet do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :phrase %>
+    <%= f.text_field :phrase %>
+  </div>
+
+  <div>
+    <%= f.label :picture %>
+    <%= f.text_field :picture %>
+  </div>
+
+  <div>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+
+  <div>
+    <%= f.label :dog, "Is this a pet a doge?" %>
+    <%= f.check_box :dog %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

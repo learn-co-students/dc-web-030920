@@ -1,0 +1,8 @@
+<div class="columns">
+  <% @pets.each do |p| %>
+    <div class="column">
+      <%= image_tag(p.picture) %>
+      <%= link_to p.name, p %>
+    </div>
+  <% end %>
+</div>

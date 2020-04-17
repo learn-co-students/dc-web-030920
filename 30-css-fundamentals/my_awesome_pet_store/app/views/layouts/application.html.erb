@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyAwesomePetPage 🤙</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%# Bulma Tags go here 👇 %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  </head>
+
+  <body>
+    <nav class='navbar'>
+      <div class="navbar-brand">
+        <%= link_to 'Home', home_path, id: 'home' %>
+      </div>
+      <%= link_to 'Good Doges', pets_path, class: 'navbar-item' %>
+      <%= link_to 'Add New Doge', new_pet_path, class: 'navbar-item' %>
+    </nav>
+    <main>
+     <%= yield %>
+     </main>
+    <footer>
+      <div>copyright 2020 Chine Anikwe Productions</div>
+      <%= link_to 'Not Doges', not_doges_path %>
+    <footer>
+  </body>
+</html>

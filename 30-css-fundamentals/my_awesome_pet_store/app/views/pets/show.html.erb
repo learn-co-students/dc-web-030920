@@ -1,0 +1,19 @@
+<h1><%= @pet.name %> 🎉 </h1>
+
+<div class='profile-image'>
+  <%= image_tag(@pet.picture) %>
+</div>
+
+<p>Phrase: <%= @pet.phrase %></p>
+<p>Bio: <%= @pet.bio %></p>
+
+<%= link_to @pet.dog ? %"Edit Doge" : "Make Cat into Doge" , edit_pet_path(@pet) %>
+
+<% if @pet.dog %>
+  <%= link_to  "Delete 😢", @pet, method: :delete, data: { confirm: 'Are you sure you want to remove this doggo?' }  %>
+<% else %>
+  <%= link_to  "Byeee 👋", @pet, method: :delete  %>
+<% end %>
+
+
+
