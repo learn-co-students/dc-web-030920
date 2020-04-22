@@ -1,0 +1,192 @@
+Started GET "/3" for ::1 at 2019-06-25 19:41:36 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"3"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (can't convert String into time interval):
+  
+app/controllers/timer_controller.rb:3:in `sleep'
+app/controllers/timer_controller.rb:3:in `show'
+Started GET "/3" for ::1 at 2019-06-25 19:41:50 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"3"}
+Completed 200 OK in 3003ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:41:54 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:41:58 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1005ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:41:59 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:42:10 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1003ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:42:12 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:42:20 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1002ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:42:25 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1004ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:42:26 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:45:25 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1004ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:45:27 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:45:29 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1006ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:45:31 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:45:34 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1005ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:45:35 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/1" for ::1 at 2019-06-25 19:45:38 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1003ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:45:39 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/5" for ::1 at 2019-06-25 19:45:48 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"5"}
+Completed 200 OK in 5003ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:45:53 -0400
+Processing by TimerController#show as 
+  Parameters: {"num"=>"favicon"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello/2" for ::1 at 2019-06-25 19:48:22 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"2"}
+Completed 200 OK in 2005ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-25 19:48:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/hello/2" for ::1 at 2019-06-25 19:48:28 -0400
+Processing by TimerController#show as */*
+  Parameters: {"num"=>"2"}
+Completed 200 OK in 2004ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello/2" for ::1 at 2019-06-25 19:49:30 -0400
+Processing by TimerController#show as */*
+  Parameters: {"num"=>"2"}
+Completed 200 OK in 2002ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello/2" for ::1 at 2019-06-25 19:49:57 -0400
+Processing by TimerController#show as */*
+  Parameters: {"num"=>"2"}
+Completed 200 OK in 2005ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello/1" for ::1 at 2020-04-22 08:10:53 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1001ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello/5" for ::1 at 2020-04-22 08:10:58 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"5"}
+Completed 200 OK in 5001ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello/1" for ::1 at 2020-04-22 08:12:32 -0400
+Processing by TimerController#show as HTML
+  Parameters: {"num"=>"1"}
+Completed 200 OK in 1002ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
