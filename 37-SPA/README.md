@@ -12,6 +12,32 @@ X As a user, I can click a pokemon to delete it
 
 - When <some event> happens, I want to make a <what kind of> fetch call to the API, and manipulate the DOM <how?>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - When the page loads, I want to make a GET request to get ALL my pokemon, and then render ALL pokemon to the DOM
 - When a user submits the form, I want to make a POST fetch to add the pokemon resource to the backend data, and manipulate the DOM by rendeing a new pokemon card inside #pokemon-container
 - When a pokemon is clicked, I want to make a DELETE fetch, and that pokemon card should dissapear from the DOM
