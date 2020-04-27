@@ -1,6 +1,6 @@
 class CatsController < ApplicationController
   def index
-    render json: Cat.all.as_json(:include => :hobbies) #Array of only cat data (NO hobbies data ) .as_json
+    render json: Cat.all.as_json(:include => :hobbies)
   end
 
   def show
