@@ -17,6 +17,9 @@
 When page loads, make a fetch call to get hobbies, render the hobbies on the DOM
 - /hobbies (when a request is made for this route) => return hobbies as JSON
 
+When page loads, make a fetch call to get cats data, render the cats on the DOM
+
+When the form is submitted, make a POST fetch, render that cat onto the DOM 
 
 ### Project Planning
 - wireframes: UI for your project

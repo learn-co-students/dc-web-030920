@@ -1,0 +1,2 @@
+class CatHobby < ApplicationRecord
+end
