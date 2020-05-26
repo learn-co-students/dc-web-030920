@@ -21,7 +21,7 @@ X Actually check as password
   - store the password in our db SOMEHOW
   - DO NOT want to store the password as plain text
 
-- Have log in persist when use refreshes the page
+- Have user log in persist when use refreshes the page
 
 
 [React-Rails auth flow](goo.gl/wamL2x)
@@ -71,21 +71,23 @@ Re-migrate and re-seed the database
 
 ## Introduce the App
 - Only logged in users can see their profile
-
-## What's Changed?
 - Single Page app
-- Instead of a form submit, we use `fetch`
+- On a form submit, we use `fetch`
 - Cookies not automatically included/managed
 - How do we include our authentication when we're using fetch?
+
+- store NOT the password in localStorage
+ - store something that represents the user is authenticated
 
 ## Token Auth
 - Instead of a session cookie
 - send back a 'token' as data
 - Plays the same role - authenticate who we are
 
-- How do we generate the token?
-- How do we send it to the client?
-- How do we store it on the client?
+X How do we generate the token?
+   - using the jwt gem: JWT.encode and JWT.decode
+X How do we send it to the client?
+X How do we store it on the client?
 - How do we send it back and read it?
 
 ## Token
@@ -93,6 +95,10 @@ Re-migrate and re-seed the database
 - _Cryptographically Secure_
   - protection from eavesdropping - no one can read the data
   - protection from tampering - signed, no one can forge a signature (JWT)
+
+token => unique user
+"123.abc" <=> {user_id: 15}
+"456.xyz" <=> {user_id: 16}
 
 ## [JWT](https://jwt.io/)
  - encode?

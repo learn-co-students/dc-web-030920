@@ -26,12 +26,14 @@ class LoginForm extends React.Component {
         password: this.state.password
       })
     }).then(res => res.json())
-    .then(userData => {
-      console.log("response from the server", userData)
-      if(userData.error_message){
-        alert(userData.error_message)
+    .then(data => {
+      console.log("response from the server", data)
+      if(data.error_message){
+        alert(data.error_message)
       }else{
-        this.props.updateCurrentUser(userData)
+        //successful log in
+        localStorage.setItem("token", data.token)
+        this.props.updateCurrentUser(data.user_data)
       }
     })
   };

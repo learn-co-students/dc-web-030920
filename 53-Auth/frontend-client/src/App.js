@@ -16,20 +16,32 @@ class App extends React.Component {
     this.setState({currentUser: user})
   }
 
-  //If the URL is /login
-  //show the LogInForm component currentUser null
-  //redirect to /profile if currentUser is NOT null
+  componentDidMount(){
+    console.log("mounted")
+    if(localStorage.getItem("token")){
+      fetch("http://localhost:3000/api/v1/decode_token", {
+        headers: {
+          "Authenticate": localStorage.token
+        }
+      })
+      .then(res => res.json())
+      .then(userData => {
+        this.updateCurrentUser(userData)
+        //if error, don't update the state
+      })
+    }else{
+      console.log("No token found, user is not authenticated")
+    }
+  }
 
-  //If the URL is /profile and there is a currentUser => Profile
-  //If the URL is /profile and there is NO currentUser => redirect back to /login
   render(){
     return (
       <Fragment>
-        <Nav />
+        <Nav user={this.state.currentUser} updateCurrentUser={this.updateCurrentUser}/>
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/login" />} />
           <Route exact path="/profile" render={() => (
-            this.state.currentUser ?  <Profile currentUser={this.state.currentUser}/> : <Redirect to="/login"/> 
+            this.state.currentUser ?  <Profile currentUser={this.state.currentUser}/> : <Redirect to="/login"/>
           ) } />
           <Route exact path="/login" render={() => (
             this.state.currentUser == null ? <LoginForm updateCurrentUser={this.updateCurrentUser} /> : <Redirect to="/profile"/>
