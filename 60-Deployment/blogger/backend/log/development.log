@@ -1,0 +1,421 @@
+Started GET "/hogs" for 127.0.0.1 at 2019-05-14 08:40:25 -0400
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateHogs (20190116053410)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "hogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190116053410_create_hogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190116053410"]]
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-14 12:40:57.243012"], ["updated_at", "2019-05-14 12:40:57.243012"]]
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mHog Create (0.6ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Porkchop"], ["created_at", "2019-05-14 12:40:58.440265"], ["updated_at", "2019-05-14 12:40:58.440265"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mHog Create (0.6ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bacon"], ["created_at", "2019-05-14 12:40:58.444064"], ["updated_at", "2019-05-14 12:40:58.444064"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mHog Create (0.8ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Martha"], ["created_at", "2019-05-14 12:40:58.448311"], ["updated_at", "2019-05-14 12:40:58.448311"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mHog Create (0.6ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lane"], ["created_at", "2019-05-14 12:40:58.453573"], ["updated_at", "2019-05-14 12:40:58.453573"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mHog Create (0.5ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Hillary"], ["created_at", "2019-05-14 12:40:58.458242"], ["updated_at", "2019-05-14 12:40:58.458242"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mHog Create (0.6ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Paul"], ["created_at", "2019-05-14 12:40:58.461616"], ["updated_at", "2019-05-14 12:40:58.461616"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+Started GET "/hogs" for 127.0.0.1 at 2019-05-14 08:41:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/thuyan.duong/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HogsController#index as HTML
+  [1m[36mHog Load (0.2ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hogs" for 127.0.0.1 at 2019-05-14 08:42:31 -0400
+Processing by HogsController#index as */*
+  [1m[36mHog Load (0.3ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/hogs" for 127.0.0.1 at 2019-05-14 08:42:38 -0400
+Processing by HogsController#create as */*
+  Parameters: {"name"=>"Rob", "hog"=>{"name"=>"Rob"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/hogs_controller.rb:7
+  [1m[36mHog Create (0.7ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rob"], ["created_at", "2019-05-14 12:42:38.252465"], ["updated_at", "2019-05-14 12:42:38.252465"]]
+  ↳ app/controllers/hogs_controller.rb:7
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/hogs_controller.rb:7
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/hogs" for 127.0.0.1 at 2019-05-14 08:42:39 -0400
+Processing by HogsController#index as */*
+  [1m[36mHog Load (0.7ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mHog Create (1.6ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Porkchop"], ["created_at", "2020-01-31 19:10:47.208545"], ["updated_at", "2020-01-31 19:10:47.208545"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mHog Create (0.4ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bacon"], ["created_at", "2020-01-31 19:10:47.213479"], ["updated_at", "2020-01-31 19:10:47.213479"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mHog Create (0.4ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Martha"], ["created_at", "2020-01-31 19:10:47.216395"], ["updated_at", "2020-01-31 19:10:47.216395"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mHog Create (0.3ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lane"], ["created_at", "2020-01-31 19:10:47.218908"], ["updated_at", "2020-01-31 19:10:47.218908"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mHog Create (0.3ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Hillary"], ["created_at", "2020-01-31 19:10:47.223712"], ["updated_at", "2020-01-31 19:10:47.223712"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mHog Create (0.4ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Paul"], ["created_at", "2020-01-31 19:10:47.225995"], ["updated_at", "2020-01-31 19:10:47.225995"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-01-31 14:11:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/canikwe/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/canikwe/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/canikwe/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/heroines" for 127.0.0.1 at 2020-01-31 14:11:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/heroines"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/hogs" for 127.0.0.1 at 2020-01-31 14:11:29 -0500
+Processing by HogsController#index as HTML
+  [1m[36mHog Load (0.2ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 14ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hogs" for 127.0.0.1 at 2020-01-31 14:13:41 -0500
+Processing by HogsController#index as */*
+  [1m[36mHog Load (0.3ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/hogs" for 127.0.0.1 at 2020-01-31 14:13:59 -0500
+Processing by HogsController#create as */*
+  Parameters: {"name"=>"Chine", "hog"=>{"name"=>"Chine"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/hogs_controller.rb:7
+  [1m[36mHog Create (0.6ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Chine"], ["created_at", "2020-01-31 19:13:59.524444"], ["updated_at", "2020-01-31 19:13:59.524444"]]
+  ↳ app/controllers/hogs_controller.rb:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/hogs_controller.rb:7
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/hogs" for 127.0.0.1 at 2020-01-31 14:14:04 -0500
+Processing by HogsController#index as HTML
+  [1m[36mHog Load (0.2ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/hogs" for 127.0.0.1 at 2020-01-31 14:14:15 -0500
+Processing by HogsController#create as */*
+  Parameters: {"name"=>"Rob or Matt or Whatever", "hog"=>{"name"=>"Rob or Matt or Whatever"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/hogs_controller.rb:7
+  [1m[36mHog Create (0.4ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rob or Matt or Whatever"], ["created_at", "2020-01-31 19:14:15.249947"], ["updated_at", "2020-01-31 19:14:15.249947"]]
+  ↳ app/controllers/hogs_controller.rb:7
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/hogs_controller.rb:7
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/hogs" for ::1 at 2020-01-31 14:31:44 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "demo_test_development" does not exist
+):
+  
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (458.0ms)[0m  [1m[35mCREATE DATABASE "hogs" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "hogs" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (336.0ms)[0m  [1m[35mCREATE DATABASE "hogs_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "hogs_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (328.1ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (331.8ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (137.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_awesome_hogs_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_awesome_hogs_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (311.8ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (137.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_awesome_hogs"[0m
+  ↳ bin/rails:9
+  [1m[35m (133.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_awesome_hogs_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (352.1ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (321.5ms)[0m  [1m[35mCREATE DATABASE "my_awesome_hogs_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6833097270822993660)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateHogs (20190116053410)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "hogs" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190116053410_create_hogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190116053410"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-31 19:34:29.584736"], ["updated_at", "2020-01-31 19:34:29.584736"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6833097270822993660)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mHog Create (0.8ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Porkchop"], ["created_at", "2020-01-31 19:34:30.914699"], ["updated_at", "2020-01-31 19:34:30.914699"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mHog Create (0.3ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bacon"], ["created_at", "2020-01-31 19:34:30.941409"], ["updated_at", "2020-01-31 19:34:30.941409"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mHog Create (0.3ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Martha"], ["created_at", "2020-01-31 19:34:30.944077"], ["updated_at", "2020-01-31 19:34:30.944077"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mHog Create (0.3ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lane"], ["created_at", "2020-01-31 19:34:30.946779"], ["updated_at", "2020-01-31 19:34:30.946779"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mHog Create (0.3ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hillary"], ["created_at", "2020-01-31 19:34:30.949458"], ["updated_at", "2020-01-31 19:34:30.949458"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mHog Create (0.2ms)[0m  [1m[32mINSERT INTO "hogs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Paul"], ["created_at", "2020-01-31 19:34:30.951844"], ["updated_at", "2020-01-31 19:34:30.951844"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+Started GET "/hogs" for ::1 at 2020-01-31 14:34:37 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/canikwe/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HogsController#index as HTML
+  [1m[36mHog Load (0.5ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/hogs" for ::1 at 2020-01-31 14:48:51 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/canikwe/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HogsController#index as */*
+  [1m[36mHog Load (0.7ms)[0m  [1m[34mSELECT "hogs".* FROM "hogs"[0m
+  ↳ app/controllers/hogs_controller.rb:3
+Completed 200 OK in 18ms (Views: 1.9ms | ActiveRecord: 7.3ms)
+
+

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Band renders correctly 1`] = `
+<div>
+  <li>
+    Aerosmith
+  </li>
+  <button
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</div>
+`;
